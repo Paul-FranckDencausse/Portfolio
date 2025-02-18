@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px; /* Ajuster selon la hauteur de la navbar */
+        }
+        .navbar-brand img {
+            height: 160px; /* Ajuste la taille de ta photo */
+            width: auto;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        <a class="navbar-brand" href="#"><img src="smile.png" alt="paul-franckdencausse"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#apropos">À Propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!-- Contenu principal -->
+    <div class="container">
+        <section id="welcome">
+            <h1>Bienvenue sur mon portfolio !</h1>
+        </section>
+
+        <section id="apropos">
+            <h2>À propos</h2>
+            <p>
+                Bonjour, je suis <strong>Paul-Franck Dencausse</strong>, développeur web passionné par la création de sites modernes et performants. 
+                Après plusieurs années d’expérience en professeur d'anglais, j’ai décidé de me reconvertir dans le développement web pour allier ma créativité à ma passion pour la technologie.
+            </p>
+            <p>
+                Ma force ? Une approche centrée sur l’utilisateur, alliant performance, design soigné et accessibilité. 
+                Je maîtrise le développement front-end et back-end, avec un penchant pour <strong>Symfony, Bootstrap 
+                et les bonnes pratiques du web</strong>.
+            </p>
+            <p>💡 Besoin d’un site web ou d’une refonte ? <a href="#contact">Discutons-en !</a></p>
+        </section>
+        
+        <section id="portfolio" class="my-5">
+            <h2>Portfolio</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="monsieur_seurin.png" class="card-img-top" alt="Projet 1">
+                        <div class="card-body">
+                            <h5 class="card-title">La cave de Monsieur Seurin</h5>
+                            <p class="card-text">Site vitrine pour cave à vins</p>
+                            <a href="https://paul-franckdencausse.github.io/La-cave-de-Monsieur-Seurin/" 
+                            class="btn btn-warning text-light">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="boucherie_seurin.png" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">La boucherie Saint Seurin</h5>
+                            <p class="card-text">Site vitrine pour une boucherie</p>
+                            <a href="https://paul-franckdencausse.github.io/La-Boucherie-Saint-Seurin/" 
+                            class="btn btn-warning text-light">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="my-5">
+            <h2>Services</h2>
+            <ul>
+                <li>Développement web</li>
+                <li>Optimisation SEO</li>
+            </ul>
+        </section>
+
+        <section id="blog" class="my-5">
+            <h2>Blog</h2>
+            <p>Découvrez mes derniers articles :</p>
+            <div class="list-group">
+                <a href="japon.html" class="list-group-item list-group-item-action">Le webdesign japonais</a>
+                <a href="centrer.html" class="list-group-item list-group-item-action">Centrer une div</a>
+            </div>
+        </section>
+
+        <section id="contact" class="my-5">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/xanqlbbp" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning text-light">Envoyer</button>
+            </form>
+        </section>
+    </div>
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+        <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+        <p class="mb-0">
+            <a href="#contact" class="text-warning">Me contacter</a> | 
+            <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+            <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+        </p>
+    </div>
+</footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
