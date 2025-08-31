@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article de Bloc</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+    <header>
+        <div class="bg-warning py-4 text-center">
+            <h1 class="mb-0">Article de Bloc</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container my-5 p-4 bg-white rounded shadow">
+            <h2 class="mt-3 text-light">Présentation</h2>
+            <p>D'un côté j'aime Minecraft (j'ai même le livre de cuisine officiel) de l'autre j'ai envie d'apprendre Java. Alors autant faire d'une pierre, deux coups!</p>
+
+            <h2 class="mt-4">Fonctionnalités</h2>
+            <ul>
+                <li>Ajoute un nouveau bloc avec une texture personnalisée. Pour la personnalisation voyez ça avec un vrai artiste.</li>
+                <li>Le bloc peut être placé et cassé dans le monde de Minecraft.</li>
+            </ul>
+
+            <h2 class="mt-4">Prérequis</h2>
+            <ul>
+                <li>Minecraft Forge installé pour la version correspondante.</li>
+                <li>Java Development Kit (JDK) installé.</li>
+            </ul>
+
+            <h2 class="mt-4">Installation</h2>
+            <h3 class="mt-3">Téléchargez le Mod :</h3>
+            <p>Téléchargez le fichier .jar du mod depuis la section des releases.</p>
+
+            <h3 class="mt-3">Installer le Mod :</h3>
+            <p>Placez le fichier .jar dans le dossier <code>mods</code> de votre installation Minecraft.</p>
+
+            <h3 class="mt-3">Lancer Minecraft :</h3>
+            <p>Lancez Minecraft avec le profil Forge pour charger le mod.</p>
+
+            <h2 class="mt-4">Utilisation</h2>
+            <ul>
+                <li>Créez un Nouveau Monde ou Chargez un Monde Existant : le nouveau bloc sera disponible dans l'inventaire créatif.</li>
+                <li>Placez le Bloc : sélectionnez-le et placez-le comme n’importe quel autre bloc.</li>
+            </ul>
+
+            <h2 class="mt-4">Personnalisation</h2>
+            <ul>
+                <li><strong>Texture :</strong> modifiez <code>my_first_block.png</code> dans <code>src/main/resources/assets/mymod/textures/blocks/</code>.</li>
+                <li><strong>Propriétés :</strong> ajustez dureté, résistance, etc. dans <code>MyFirstBlock.java</code>.</li>
+            </ul>
+
+            <h2 class="mt-4">Développement</h2>
+            <h3 class="mt-3">Préparer l'environnement</h3>
+            <ul>
+                <li>Installez le JDK.</li>
+                <li>Installez Minecraft Forge MDK pour la version souhaitée.</li>
+                <li>Configurez votre IDE (IntelliJ IDEA ou Eclipse).</li>
+            </ul>
+
+            <h3 class="mt-3">Construire le Mod</h3>
+            <ul>
+                <li>
+                    Générez le projet :
+                    <pre class="bg-light border rounded p-2"><code>gradlew setupDecompWorkspace eclipse  # Pour Eclipse
+gradlew setupDecompWorkspace idea    # Pour IntelliJ IDEA</code></pre>
+                </li>
+                <li>
+                    Construisez le mod :
+                    <pre class="bg-light border rounded p-2"><code>gradlew build</code></pre>
+                </li>
+                <li>Testez le mod depuis votre IDE.</li>
+            </ul>
+
+            <h2 class="mt-4">Contribuer</h2>
+            <ul>
+                <li>Forkez le projet.</li>
+                <li>Créez une branche pour votre fonctionnalité : <code>git checkout -b feature/nouvelle-fonctionnalite</code></li>
+                <li>Commitez vos modifications : <code>git commit -m 'Ajouter une nouvelle fonctionnalité'</code></li>
+                <li>Poussez vers la branche : <code>git push origin feature/nouvelle-fonctionnalite</code></li>
+                <li>Ouvrez une Pull Request.</li>
+            </ul>
+
+            <h2 class="mt-4">Licence</h2>
+            <p>Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.</p>
+        </div>
+    </main>
+
+    <footer class="text-center py-3 mt-4 text-muted bg-white">
+        &copy; 2025 Mon Premier Bloc - Mod Minecraft
+    </footer>
+</body>
+</html>

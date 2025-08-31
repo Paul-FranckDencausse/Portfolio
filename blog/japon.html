@@ -6,23 +6,126 @@
     <title>Développement Web : Occident vs Japon</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Meiryo', 'Arial', sans-serif;
+            background: linear-gradient(90deg, #fffbe7 60%, #ffeaea 100%);
+            margin: 0;
+            padding: 0;
         }
-        h1, h2 {
+        header {
+            background: linear-gradient(90deg, #ffec3d 60%, #ffb3b3 100%);
+            border-bottom: 4px solid #ff3c3c;
+            box-shadow: 0 4px 12px #ffb3b355;
+            padding: 24px 0 12px 0;
+            text-align: center;
+        }
+        h1 {
+            color: #d90000;
+            font-size: 2.2em;
+            margin: 0 0 8px 0;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 0 #fff, 2px 2px 0 #ffb3b3;
+        }
+        header p {
             color: #333;
+            font-size: 1.1em;
+            margin: 0;
+            background: #fffbe7;
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 12px;
+            border: 2px dashed #ffb300;
         }
-        p {
-            color: #555;
+        section {
+            margin: 24px auto;
+            max-width: 900px;
+            background: #fff;
+            border: 3px solid #ffb300;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px #ffb3b355;
+            padding: 18px 24px 18px 24px;
+            position: relative;
+        }
+        section:not(:first-of-type) {
+            border-color: #ff3c3c;
+        }
+        h2 {
+            color: #fff;
+            background: linear-gradient(90deg, #ffb300 60%, #ff3c3c 100%);
+            padding: 6px 18px;
+            border-radius: 12px;
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 12px;
+            box-shadow: 1px 2px 0 #ffb3b3;
+            display: inline-block;
+        }
+        p, ul, blockquote {
+            color: #222;
+            font-size: 1.08em;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 22px;
+            margin-bottom: 12px;
+        }
+        li {
+            margin-bottom: 4px;
+            background: #fffbe7;
+            border-left: 4px solid #ffb300;
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: list-item;
         }
         blockquote {
             font-style: italic;
-            background: #f4f4f4;
-            padding: 10px;
-            border-left: 4px solid #333;
+            background: #ffeaea;
+            padding: 12px 18px;
+            border-left: 6px solid #ff3c3c;
+            border-radius: 10px;
+            margin: 18px 0 10px 0;
+            color: #d90000;
+            font-size: 1.1em;
+        }
+        /* Ajout de bannières et badges façon japonais */
+        .badge-jp {
+            display: inline-block;
+            background: #ff3c3c;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.95em;
+            border-radius: 8px;
+            padding: 2px 10px;
+            margin-right: 8px;
+            box-shadow: 1px 1px 0 #ffb300;
+            letter-spacing: 1px;
+        }
+        /* Ajout d'un effet "pop" sur les titres de section */
+        h2::before {
+            content: "★ ";
+            color: #fffbe7;
+            text-shadow: 1px 1px 0 #ffb300;
+        }
+        /* Ajout de petites bannières colorées */
+        .banner {
+            display: inline-block;
+            background: #ffb300;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 6px;
+            padding: 2px 10px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            margin-right: 8px;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 600px) {
+            section {
+                padding: 10px 6px;
+            }
+            h2 {
+                font-size: 1.1em;
+                padding: 4px 10px;
+            }
         }
     </style>
 </head>
@@ -30,40 +133,46 @@
 
     <header>
         <h1>Développement Web : Les différences entre l’Occident et le Japon</h1>
-        <p><em>Un regard sur deux visions du web radicalement différentes</em></p>
+        <p><span class="badge-jp">特集</span>Un regard sur deux visions du web radicalement différentes</p>
     </header>
 
     <section>
-        <h2>1. Minimalisme vs Densité</h2>
+        <span class="banner">1. Minimalisme vs Densité</span>
+        <h2>Minimalisme vs Densité</h2>
         <p>En Occident, le design web suit souvent une approche minimaliste, inspirée du <strong>flat design</strong> et des principes de clarté et d’accessibilité. Google, Apple ou encore Tesla privilégient des interfaces épurées, avec peu de texte et beaucoup d’espace blanc.</p>
         <p>À l’inverse, les sites japonais sont souvent très <strong>chargés</strong>, avec une abondance de texte, de couleurs et d’éléments visuels. Cela peut sembler chaotique pour un utilisateur occidental, mais au Japon, c’est une manière efficace de présenter un maximum d’informations rapidement.</p>
     </section>
 
     <section>
-        <h2>2. L’Utilisation des Couleurs</h2>
+        <span class="banner" style="background:#ff3c3c;">2. L’Utilisation des Couleurs</span>
+        <h2>L’Utilisation des Couleurs</h2>
         <p>En Occident, les couleurs sont souvent sobres et limitées à une palette réduite pour garder une harmonie visuelle. Le bleu, par exemple, est une couleur très utilisée pour la confiance et la sécurité.</p>
         <p>Au Japon, il est courant de voir des sites avec une explosion de couleurs vives. Les bannières animées, les fonds multicolores et les contrastes extrêmes ne sont pas rares. Cela vient de l’esthétique populaire japonaise, influencée par les mangas, les jeux vidéo et la signalétique urbaine.</p>
     </section>
 
     <section>
-        <h2>3. La Navigation et l’Expérience Utilisateur</h2>
+        <span class="banner" style="background:#ffb300;">3. Navigation & Expérience</span>
+        <h2>La Navigation et l’Expérience Utilisateur</h2>
         <p>Les sites occidentaux adoptent des menus simplifiés, souvent avec un menu hamburger sur mobile et une structure claire.</p>
         <p>Les sites japonais, eux, proposent souvent de nombreux liens et sous-menus visibles dès l’accueil. Cela peut paraître compliqué, mais les utilisateurs japonais préfèrent avoir un accès direct aux différentes sections sans avoir à trop cliquer.</p>
     </section>
 
     <section>
-        <h2>4. La Typographie et l’Affichage du Texte</h2>
+        <span class="banner" style="background:#ff3c3c;">4. Typographie & Texte</span>
+        <h2>La Typographie et l’Affichage du Texte</h2>
         <p>Les sites occidentaux utilisent des polices modernes et lisibles, avec des tailles relativement grandes.</p>
         <p>Au Japon, la langue elle-même influence le design : les caractères kanji permettent de condenser beaucoup d’informations en peu d’espace, donc le texte est souvent dense et serré, avec des colonnes plus compactes.</p>
     </section>
 
     <section>
-        <h2>5. Les Technologies Utilisées</h2>
+        <span class="banner" style="background:#ffb300;">5. Technologies</span>
+        <h2>Les Technologies Utilisées</h2>
         <p>En Occident, les frameworks comme React, Vue.js et Angular dominent le marché. Le design responsive et les performances sont prioritaires.</p>
         <p>Au Japon, beaucoup de sites, même d’entreprises modernes, utilisent encore du HTML et du CSS basiques, avec peu d’optimisation mobile. Cependant, l’essor des start-ups japonaises tend à moderniser ces pratiques.</p>
     </section>
 
     <section>
+        <span class="banner" style="background:#ff3c3c;">Conclusion</span>
         <h2>Conclusion</h2>
         <p>Ces différences viennent en grande partie des <strong>préférences culturelles et des attentes des utilisateurs</strong>. L’Occident privilégie un design simple et intuitif, tandis que le Japon mise sur l’efficacité et la richesse d’informations.</p>
         <blockquote>

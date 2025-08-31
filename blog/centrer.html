@@ -4,111 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pourquoi est-ce si frustrant de centrer une div en CSS ?</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        blockquote {
-            font-style: italic;
-            background: #f4f4f4;
-            padding: 10px;
-            border-left: 4px solid #333;
-        }
-        code {
-            background: #eee;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-family: "Courier New", monospace;
-        }
-        .image-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
-    <header>
-        <h1>Pourquoi est-ce si frustrant de centrer une div en CSS ?</h1>
-        <p><em>Une aventure entre flexbox, margin et positionnement...</em></p>
-    </header>
+    <div class="container my-5">
+        <header class="mb-4 text-center bg-warning">
+            <h1 class="display-4 text-light">Pourquoi est-ce si frustrant de centrer une div en CSS ?</h1>
+            <p class="lead"><em>Une aventure entre flexbox, margin et positionnement...</em></p>
+        </header>
 
-    <div class="image-container">
-        <img src="css.png" alt="Illustration du centrage en CSS">
-    </div>
+        <div class="text-center mb-4">
+            <img src="../media/css.png" alt="Illustration du centrage en CSS" class="img-fluid rounded shadow">
+        </div>
 
-    <section>
-        <h2>1. Centrer une div : mission impossible ?</h2>
-        <p>Tout développeur web débutant (et même expérimenté !) s’est déjà arraché les cheveux en essayant de centrer une simple <code>&lt;div&gt;</code> en CSS.</p>
-        <p>En théorie, ça semble simple. En pratique… c’est un casse-tête. Pourquoi ? Parce qu'il y a plusieurs manières de le faire, et elles ne fonctionnent pas toutes selon le contexte.</p>
-    </section>
+        <section class="mb-5">
+            <h2 class="h4 text-secondary">1. Centrer une div : mission impossible ?</h2>
+            <p>Tout développeur web débutant (et même expérimenté !) s’est déjà arraché les cheveux en essayant de centrer une simple <code>&lt;div&gt;</code> en CSS.</p>
+            <p>En théorie, ça semble simple. En pratique… c’est un casse-tête. Pourquoi ? Parce qu'il y a plusieurs manières de le faire, et elles ne fonctionnent pas toutes selon le contexte.</p>
+        </section>
 
-    <section>
-        <h2>2. Les différentes méthodes (et leurs pièges)</h2>
+        <section class="mb-5">
+            <h2 class="h4 text-secondary">2. Les différentes méthodes (et leurs pièges)</h2>
 
-        <h3>📌 La méthode classique : <code>margin: auto;</code></h3>
-        <p>On pourrait penser qu’un simple :</p>
-        <pre><code>.box {
+            <h3 class="mt-4">📌 La méthode classique : <code>margin: auto;</code></h3>
+            <p>On pourrait penser qu’un simple :</p>
+            <pre class="bg-light border rounded p-2"><code>.box {
     width: 200px;
     margin: auto;
 }</code></pre>
-        <p>fera l’affaire. Eh bien… non ! Ça ne marche que si la div a une <strong>largeur définie</strong> et que son parent est en <code>display: block;</code>. Pas très flexible.</p>
+            <p>fera l’affaire. Eh bien… non ! Ça ne marche que si la div a une <strong>largeur définie</strong> et que son parent est en <code>display: block;</code>. Pas très flexible.</p>
 
-        <h3>📌 <code>text-align: center;</code> (et son piège)</h3>
-        <p>Si vous essayez de centrer une div avec <code>text-align: center;</code>, mauvaise nouvelle : ça ne fonctionne que pour du texte, pas pour un élément block.</p>
+            <h3 class="mt-4">📌 <code>text-align: center;</code> (et son piège)</h3>
+            <p>Si vous essayez de centrer une div avec <code>text-align: center;</code>, mauvaise nouvelle : ça ne fonctionne que pour du texte, pas pour un élément block.</p>
 
-        <h3>📌 La méthode <code>position: absolute;</code></h3>
-        <p>Une autre technique consiste à utiliser :</p>
-        <pre><code>.box {
+            <h3 class="mt-4">📌 La méthode <code>position: absolute;</code></h3>
+            <p>Une autre technique consiste à utiliser :</p>
+            <pre class="bg-light border rounded p-2"><code>.box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }</code></pre>
-        <p>Ça marche bien... sauf si le parent n'a pas une position définie ou si on veut un design responsive.</p>
+            <p>Ça marche bien... sauf si le parent n'a pas une position définie ou si on veut un design responsive.</p>
 
-        <h3>📌 Flexbox à la rescousse !</h3>
-        <p>Avec <code>display: flex;</code>, le centrage devient (presque) un jeu d’enfant :</p>
-        <pre><code>.parent {
+            <h3 class="mt-4">📌 Flexbox à la rescousse !</h3>
+            <p>Avec <code>display: flex;</code>, le centrage devient (presque) un jeu d’enfant :</p>
+            <pre class="bg-light border rounded p-2"><code>.parent {
     display: flex;
     justify-content: center;
     align-items: center;
 }</code></pre>
-        <p>Facile, non ? Sauf si... on oublie que ça affecte tous les enfants du parent.</p>
+            <p>Facile, non ? Sauf si... on oublie que ça affecte tous les enfants du parent.</p>
 
-        <h3>📌 La méthode ultime : CSS Grid</h3>
-        <p>Encore plus simple avec CSS Grid :</p>
-        <pre><code>.parent {
+            <h3 class="mt-4">📌 La méthode ultime : CSS Grid</h3>
+            <p>Encore plus simple avec CSS Grid :</p>
+            <pre class="bg-light border rounded p-2"><code>.parent {
     display: grid;
     place-items: center;
 }</code></pre>
-        <p>Mais si le projet est ancien et qu'il faut supporter des navigateurs obsolètes... c'est un problème.</p>
-    </section>
+            <p>Mais si le projet est ancien et qu'il faut supporter des navigateurs obsolètes... c'est un problème.</p>
+        </section>
 
-    <section>
-        <h2>3. Conclusion : Pourquoi c’est frustrant ?</h2>
-        <p>Le vrai problème, c’est qu’il n’y a pas UNE seule méthode universelle. Il faut toujours adapter en fonction du contexte, du type d’élément et du comportement attendu.</p>
-        <blockquote>
-            "Centrer une div en CSS, c’est un peu comme apprendre une recette de cuisine : il y a mille façons de faire, mais il faut trouver la bonne pour chaque plat."
-        </blockquote>
-        <p>Heureusement, avec Flexbox et Grid, les choses sont beaucoup plus simples aujourd’hui… mais pas toujours intuitives ! 😉</p>
-    </section>
+        <section>
+            <h2 class="h4 text-secondary">3. Conclusion : Pourquoi c’est frustrant ?</h2>
+            <p>Le vrai problème, c’est qu’il n’y a pas UNE seule méthode universelle. Il faut toujours adapter en fonction du contexte, du type d’élément et du comportement attendu.</p>
+            <blockquote class="blockquote bg-white border-left border-primary pl-3 py-2">
+                <p class="mb-0 font-italic">
+                    "Centrer une div en CSS, c’est un peu comme apprendre une recette de cuisine : il y a mille façons de faire, mais il faut trouver la bonne pour chaque plat."
+                </p>
+            </blockquote>
+            <p>Heureusement, avec Flexbox et Grid, les choses sont beaucoup plus simples aujourd’hui… mais pas toujours intuitives ! 😉</p>
+        </section>
+    </div>
 
 </body>
 </html>
