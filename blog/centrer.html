@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pourquoi est-ce si frustrant de centrer une div en CSS ?</title>
+    <title>Titre</title>
+    <!-- Lien vers Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../index.html">À Propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../index.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../index.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../index.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../index.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 <body class="bg-light">
 
     <div class="container my-5">
         <header class="mb-4 text-center bg-warning">
-            <h1 class="display-4 text-light">Pourquoi est-ce si frustrant de centrer une div en CSS ?</h1>
-            <p class="lead"><em>Une aventure entre flexbox, margin et positionnement...</em></p>
+         
         </header>
 
         <div class="text-center mb-4">
@@ -19,13 +48,13 @@
         </div>
 
         <section class="mb-5">
-            <h2 class="h4 text-secondary">1. Centrer une div : mission impossible ?</h2>
+            <h2 class=" text-secondary">1. Centrer une div : mission impossible ?</h2>
             <p>Tout développeur web débutant (et même expérimenté !) s’est déjà arraché les cheveux en essayant de centrer une simple <code>&lt;div&gt;</code> en CSS.</p>
             <p>En théorie, ça semble simple. En pratique… c’est un casse-tête. Pourquoi ? Parce qu'il y a plusieurs manières de le faire, et elles ne fonctionnent pas toutes selon le contexte.</p>
         </section>
 
         <section class="mb-5">
-            <h2 class="h4 text-secondary">2. Les différentes méthodes (et leurs pièges)</h2>
+            <h2 class=" text-secondary">2. Les différentes méthodes (et leurs pièges)</h2>
 
             <h3 class="mt-4">📌 La méthode classique : <code>margin: auto;</code></h3>
             <p>On pourrait penser qu’un simple :</p>
@@ -67,7 +96,7 @@
         </section>
 
         <section>
-            <h2 class="h4 text-secondary">3. Conclusion : Pourquoi c’est frustrant ?</h2>
+            <h2 class=" text-secondary">3. Conclusion : Pourquoi c’est frustrant ?</h2>
             <p>Le vrai problème, c’est qu’il n’y a pas UNE seule méthode universelle. Il faut toujours adapter en fonction du contexte, du type d’élément et du comportement attendu.</p>
             <blockquote class="blockquote bg-white border-left border-primary pl-3 py-2">
                 <p class="mb-0 font-italic">
@@ -77,6 +106,16 @@
             <p>Heureusement, avec Flexbox et Grid, les choses sont beaucoup plus simples aujourd’hui… mais pas toujours intuitives ! 😉</p>
         </section>
     </div>
+<footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+        <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+        <p class="mb-0">
+            <a href="#contact" class="text-warning">Me contacter</a> | 
+            <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+            <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+        </p>
+    </div>
+</footer>
 
 </body>
 </html>

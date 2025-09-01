@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titre }}</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        <a class="navbar-brand font-weight-bold text-dark" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#apropos">À Propos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <header class="mb-4 text-center">
+            <h1 class="display-4 text-warning">{{ titre }}</h1>
+            <p class="lead text-secondary">{{ sous_titre }}</p>
+            <!-- Optionnel : image d'en-tête -->
+            <!-- <img src="{{ image }}" alt="" class="img-fluid rounded shadow my-3" style="max-width:350px;"> -->
+        </header>
+
+        <!-- Début du contenu de l'article -->
+        <article>
+            {{ contenu }}
+        </article>
+        <!-- Fin du contenu de l'article -->
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+            <p class="mb-0">
+                <a href="../index.html#contact" class="text-warning">Me contacter</a> | 
+                <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+                <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS (optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
