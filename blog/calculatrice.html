@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une Calculatrice Simple en .NET</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        <a class="navbar-brand font-weight-bold text-dark" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#apropos">À Propos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <header class="mb-4 text-center">
+            <h1 class="display-4 text-warning">Créer une Calculatrice Simple en .NET</h1>
+            <p class="lead text-secondary">Un projet idéal pour débuter avec le développement d'applications en .NET</p>
+        </header>
+
+        <article>
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Présentation du projet</h2>
+                <p>La <strong>Calculatrice Simple en .NET</strong> est une application de base qui permet d’effectuer les opérations mathématiques fondamentales : addition, soustraction, multiplication et division. Ce projet est parfait pour s’initier à la programmation en .NET, que ce soit en mode console ou avec une interface graphique Windows Forms.</p>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Fonctionnalités principales</h2>
+                <ul>
+                    <li>Additionner deux nombres</li>
+                    <li>Soustraire deux nombres</li>
+                    <li>Multiplier deux nombres</li>
+                    <li>Diviser deux nombres (avec gestion de la division par zéro)</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Prérequis</h2>
+                <ul>
+                    <li>Visual Studio (édition Community ou supérieure)</li>
+                    <li>.NET SDK installé sur votre machine</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Installation rapide</h2>
+                <ol>
+                    <li><strong>Cloner le dépôt :</strong>
+                        <pre class="bg-light border rounded p-2"><code>git clone https://github.com/votre-utilisateur/calculatrice-simple.git</code></pre>
+                    </li>
+                    <li><strong>Ouvrir le projet :</strong>
+                        <ul>
+                            <li>Lancez Visual Studio</li>
+                            <li>Sélectionnez "Ouvrir un projet ou une solution"</li>
+                            <li>Ouvrez le fichier <code>.sln</code> du dépôt cloné</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Utilisation</h2>
+                <h5>Application Console</h5>
+                <ol>
+                    <li>Appuyez sur <strong>F5</strong> ou cliquez sur "Démarrer" dans Visual Studio pour lancer l’application.</li>
+                    <li>Suivez les instructions à l’écran pour entrer les nombres et choisir l’opération.</li>
+                    <li>Le résultat s’affiche directement dans la console.</li>
+                </ol>
+                <h5>Application Windows Forms (optionnel)</h5>
+                <ol>
+                    <li>Lancez l’application comme précédemment.</li>
+                    <li>Entrez les nombres dans les champs prévus.</li>
+                    <li>Sélectionnez l’opération dans le menu déroulant.</li>
+                    <li>Cliquez sur "Calculer" pour obtenir le résultat.</li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Contribuer au projet</h2>
+                <p>Les contributions sont les bienvenues ! Pour participer :</p>
+                <ol>
+                    <li>Forkez le projet</li>
+                    <li>Créez une branche pour votre fonctionnalité :
+                        <pre class="bg-light border rounded p-2"><code>git checkout -b feature/nouvelle-fonctionnalite</code></pre>
+                    </li>
+                    <li>Commitez vos modifications :
+                        <pre class="bg-light border rounded p-2"><code>git commit -m 'Ajouter une nouvelle fonctionnalité'</code></pre>
+                    </li>
+                    <li>Poussez vers la branche :
+                        <pre class="bg-light border rounded p-2"><code>git push origin feature/nouvelle-fonctionnalite</code></pre>
+                    </li>
+                    <li>Ouvrez une Pull Request</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2 class="h4 text-secondary">Licence</h2>
+                <p>Ce projet est sous licence MIT. Consultez le fichier <code>LICENSE</code> pour plus de détails.</p>
+                <a href="https://github.com/Paul-FranckDencausse/calculatrice.net">Le repo</a>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+            <p class="mb-0">
+                <a href="../index.html#contact" class="text-warning">Me contacter</a> | 
+                <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+                <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS (optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body> 
+</html>
