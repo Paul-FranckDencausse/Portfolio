@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisez vos commits avec un script Bash</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        <a class="navbar-brand font-weight-bold text-dark" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#apropos">À Propos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <header class="mb-4 text-center">
+            <h1 class="display-4 text-warning">Automatisez vos commits avec un script Bash</h1>
+            <p class="lead text-secondary">Gagnez du temps et sécurisez vos modifications grâce à l’automatisation Git</p>
+        </header>
+
+        <article>
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Pourquoi automatiser ses commits ?</h2>
+                <p>En développement, il est essentiel de sauvegarder régulièrement son travail. Mais il arrive d’oublier de faire un <code>git add</code>, un <code>git commit</code> ou un <code>git push</code>. Pour éviter les oublis et fluidifier le workflow, un <strong>script Bash d’auto-commit</strong> peut faire tout cela pour vous !</p>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Fonctionnalités du script</h2>
+                <ul>
+                    <li>Ajoute automatiquement tous les fichiers modifiés (<code>git add .</code>).</li>
+                    <li>Crée un commit avec un message prédéfini ou personnalisé.</li>
+                    <li>Pousse les modifications sur la branche principale (<code>main</code>).</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Installation rapide</h2>
+                <ol>
+                    <li>Clonez le dépôt :
+                        <pre class="bg-light border rounded p-2"><code>git clone https://github.com/ton-utilisateur/auto-commit-script.git</code></pre>
+                    </li>
+                    <li>Placez le fichier <code>auto_commit.sh</code> dans le répertoire de votre projet.</li>
+                    <li>Donnez-lui les droits d’exécution :
+                        <pre class="bg-light border rounded p-2"><code>chmod +x auto_commit.sh</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Utilisation</h2>
+                <p>Lancez le script dans votre terminal :</p>
+                <pre class="bg-light border rounded p-2"><code>./auto_commit.sh "Votre message de commit"</code></pre>
+                <p>Si vous ne mettez pas de message, le script utilisera <code>Mise à jour automatique</code> par défaut.</p>
+                <p>Exemples :</p>
+                <pre class="bg-light border rounded p-2"><code>./auto_commit.sh "Ajout des nouvelles fonctionnalités"
+./auto_commit.sh</code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Automatisation avancée</h2>
+                <p>Pour automatiser totalement la sauvegarde, vous pouvez planifier l’exécution du script :</p>
+                <h5>Sur Linux (avec cron)</h5>
+                <pre class="bg-light border rounded p-2"><code>crontab -e</code></pre>
+                <p>Ajoutez par exemple :</p>
+                <pre class="bg-light border rounded p-2"><code>0 * * * * /chemin/vers/ton/script/auto_commit.sh "Commit automatique"</code></pre>
+                <h5>Sur Windows (Planificateur de tâches)</h5>
+                <p>Créez une tâche qui exécute :</p>
+                <pre class="bg-light border rounded p-2"><code>bash /chemin/vers/ton/script/auto_commit.sh "Commit automatique"</code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Bonnes pratiques et précautions</h2>
+                <ul>
+                    <li><strong>Projets collaboratifs</strong> : évitez de pousser automatiquement si vous travaillez à plusieurs, pour ne pas générer de conflits.</li>
+                    <li><strong>Historique Git</strong> : trop de commits automatiques peuvent rendre l’historique difficile à lire. Utilisez ce script avec discernement !</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Licence et contributions</h2>
+                <p>Ce script est distribué sous licence MIT. Vous pouvez l’utiliser, le modifier et le partager librement.</p>
+                <p>Les contributions sont les bienvenues ! N’hésitez pas à proposer des améliorations ou signaler des problèmes sur le dépôt GitHub.</p>
+            </section>
+
+            <section>
+                <h2 class="h4 text-secondary">Besoin d’aide ?</h2>
+                <p>Si vous avez des questions ou des difficultés, ouvrez une issue sur GitHub ou contactez-moi directement. Merci d’utiliser ce script !</p>
+                <a href="https://github.com/Paul-FranckDencausse/Auto-commit" class="btn btn-warning text-dark" target="_blank">Voir le repo GitHub</a>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+            <p class="mb-0">
+                <a href="../index.html#contact" class="text-warning">Me contacter</a> | 
+                <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+                <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS (optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body> 
+</html>
