@@ -28,6 +28,12 @@
         <header class="mb-5 text-center">
             <h1 class="display-4 text-warning">Le Blog</h1>
             <p class="lead text-secondary">Retrouvez ici tous mes articles sur le développement web, l’IA, l’Aïkido et plus encore !</p>
+            <!-- Barre de recherche -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Rechercher un article...">
+                </div>
+            </div>
         </header>
 
         <div class="list-group">
@@ -67,6 +73,11 @@
                 <p class="mb-1 text-secondary">God save the King</p>
                 <small>2025</small>
             </a>
+              <a href="euro.html" class="list-group-item list-group-item-action">
+                <h5 class="mb-1 text-warning">Préprocesseur PHP €</h5>
+                <p class="mb-1 text-secondary">UE</p>
+                <small>2025</small>
+            </a>
         </div>
     </main>
 
@@ -83,4 +94,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            const articles = document.querySelectorAll('#blogList .list-group-item');
+            articles.forEach(function(article) {
+                const text = article.innerText.toLowerCase();
+                article.style.display = text.includes(filter) ? '' : 'none';
+            });
+        });
+    </script>
 </body>
