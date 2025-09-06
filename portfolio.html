@@ -28,8 +28,14 @@
         <header class="mb-5 text-center">
             <h1 class="display-4 text-warning">Mes Projets</h1>
             <p class="lead text-secondary">Découvrez quelques-unes de mes réalisations web, outils et expérimentations.</p>
+            <!-- Barre de recherche -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <input type="text" id="searchInput" class="form-control" placeholder="Rechercher un projet...">
+            </div>
+        </div>
         </header>
-
+ <div id="portfolioList">
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
@@ -79,7 +85,6 @@
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <img src="media/santa.PNG" class="card-img-top" alt="Secret Santa">
-                    <br>
                     <div class="card-body">
                         <h5 class="card-title">Générateur de Noël Canadien</h5>
                         <p class="card-text">Organisez un Secret Santa facilement.</p>
@@ -89,11 +94,11 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="media/midi.PNG" class="card-img-top" alt="Les 12 coups de MIDI">
+                    <img src="media/calendrier.PNG" class="card-img-top" alt="Les 12 coups de MIDI">
                     <div class="card-body">
-                        <h5 class="card-title">Les 12 coups de MIDI</h5>
-                        <p class="card-text">Un générateur de son MIDI pour s’amuser.</p>
-                        <a href="https://paul-franckdencausse.github.io/Il-est-MIDI/" class="btn btn-warning text-dark" target="_blank">Voir le projet</a>
+                        <h5 class="card-title">Calendrier de l'Avent</h5>
+                        <p class="card-text">Pour les enfants sages</p>
+                        <a href="https://paul-franckdencausse.github.io/Calendrier-de-l-avent/" class="btn btn-warning text-dark" target="_blank">Voir le projet</a>
                     </div>
                 </div>
             </div>
@@ -109,10 +114,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Ajoute d'autres projets ici si besoin -->
-              <div class="col-md-4">
+            <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="media/pizza.PNG" class="card-img-top" alt="Feu tricolore dynamique">
+                    <img src="media/pizza.PNG" class="card-img-top" alt="Pizzeria Le Parrain">
                     <div class="card-body">
                         <h5 class="card-title">Pizzeria Le Parrain</h5>
                         <p class="card-text">Un cadre chaleureux et convivial</p>
@@ -120,9 +124,19 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="media/midi.PNG" class="card-img-top" alt="Les 12 coups de MIDI">
+                    <div class="card-body">
+                        <h5 class="card-title">Les 12 coups de MIDI</h5>
+                        <p class="card-text">Un générateur de son MIDI pour s’amuser.</p>
+                        <a href="https://paul-franckdencausse.github.io/Il-est-MIDI/" class="btn btn-warning text-dark" target="_blank">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
-
+    </div>
+</main>
     <footer class="bg-dark text-light text-center py-3">
         <div class="container">
             <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
@@ -136,3 +150,17 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const filter = this.value.toLowerCase();
+        // Sélectionne toutes les cartes projet
+        const cards = document.querySelectorAll('#portfolioList .card');
+        cards.forEach(function(card) {
+            const text = card.innerText.toLowerCase();
+            card.parentElement.style.display = text.includes(filter) ? '' : 'none';
+        });
+    });
+</script>
+</body>
+</html>
