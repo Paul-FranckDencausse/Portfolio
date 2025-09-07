@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un deck Anki Français-Portugais facilement avec Python</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        <a class="navbar-brand font-weight-bold text-dark" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#apropos">À Propos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <header class="mb-4 text-center">
+            <h1 class="display-4 text-warning">Créer un deck Anki Français-Portugais facilement avec Python</h1>
+            <p class="lead text-secondary">Automatisez la création de vos cartes de vocabulaire pour progresser en portugais européen !</p>
+        </header>
+
+        <article>
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Pourquoi ce projet ?</h2>
+                <p>Apprendre une langue, c’est avant tout mémoriser du vocabulaire. Anki est l’outil idéal pour cela, mais saisir chaque carte à la main peut vite devenir fastidieux. Ce projet vous permet de générer automatiquement un deck Anki à partir d’un simple fichier texte, pour accélérer votre apprentissage du portugais européen.</p>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Fonctionnement</h2>
+                <ol>
+                    <li>Préparez un fichier <code>vocab.txt</code> contenant vos paires de mots, une par ligne, au format :<br>
+                        <code>mot_francais : mot_portugais</code>
+                    </li>
+                    <li>Lancez le script Python fourni (<code>vocab_anki.py</code>) pour transformer ce fichier en un CSV compatible Anki.</li>
+                    <li>Importez le fichier CSV dans Anki et commencez à réviser !</li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Installation rapide</h2>
+                <ol>
+                    <li>Clonez le dépôt :
+                        <pre class="bg-light border rounded p-2"><code>git clone https://github.com/ton-repository/vocab-fr-pt-anki.git
+cd vocab-fr-pt-anki</code></pre>
+                    </li>
+                    <li>Créez votre fichier <code>vocab.txt</code> avec vos mots.</li>
+                    <li>Générez le CSV :
+                        <pre class="bg-light border rounded p-2"><code>python vocab_anki.py</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Importation dans Anki</h2>
+                <ol>
+                    <li>Ouvrez Anki et cliquez sur "Importer".</li>
+                    <li>Sélectionnez le fichier <code>fr_pt_deck.csv</code> généré.</li>
+                    <li>Choisissez la virgule comme séparateur de champs.</li>
+                    <li>Assurez-vous que les champs correspondent à Recto/Verso.</li>
+                    <li>Cliquez sur "Importer" et le tour est joué !</li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Personnalisation</h2>
+                <p>Vous souhaitez inverser les langues (portugais → français) ou ajouter plus de mots ? Il suffit de modifier le fichier <code>vocab.txt</code> ou d’adapter le script Python pour changer l’ordre des colonnes.</p>
+                <p>Veillez à respecter le format <code>mot_francais : mot_portugais</code> pour chaque ligne.</p>
+            </section>
+
+            <section>
+                <h2 class="h4 text-secondary">Conclusion</h2>
+                <p>Ce projet vous fait gagner un temps précieux et vous permet de vous concentrer sur l’essentiel : apprendre et pratiquer le portugais européen. N’hésitez pas à contribuer ou à adapter le script à vos besoins !</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+            <p class="mb-0">
+                <a href="../index.html#contact" class="text-warning">Me contacter</a> | 
+                <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+                <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS (optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
