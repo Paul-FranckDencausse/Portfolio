@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders en Python avec Turtle</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        <a class="navbar-brand font-weight-bold text-dark" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#apropos">À Propos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <header class="mb-4 text-center">
+            <h1 class="display-4 text-warning">Space Invaders en Python avec Turtle</h1>
+            <p class="lead text-secondary">Un projet rétro pour découvrir la programmation graphique et événementielle en Python</p>
+        </header>
+
+        <article>
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Présentation du projet</h2>
+                <p>
+                    <strong>Space Invaders</strong> est un classique du jeu vidéo d’arcade. Ce projet propose une version accessible réalisée en Python avec la bibliothèque <code>turtle</code>. L’objectif : déplacer un canon, tirer des lasers et marquer des points en touchant les aliens qui descendent.
+                </p>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Fonctionnalités principales</h2>
+                <ul>
+                    <li>Déplacement du canon avec les flèches gauche/droite</li>
+                    <li>Tir de laser avec la barre d’espace</li>
+                    <li>Apparition aléatoire des aliens en haut de l’écran</li>
+                    <li>Score affiché selon le nombre d’aliens touchés</li>
+                    <li>Fin de partie si un alien atteint le bas de l’écran</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Prérequis et installation</h2>
+                <ul>
+                    <li>Python 3.x (la bibliothèque <code>turtle</code> est incluse par défaut)</li>
+                </ul>
+                <ol>
+                    <li>Clonez le dépôt :
+                        <pre class="bg-light border rounded p-2"><code>git clone https://github.com/Paul-FranckDencausse/Space-Invaders
+cd space-invaders</code></pre>
+                    </li>
+                    <li>Lancez le jeu :
+                        <pre class="bg-light border rounded p-2"><code>python space_invaders.py</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Commandes du jeu</h2>
+                <ul>
+                    <li><strong>Flèche gauche/droite</strong> : déplacer le canon</li>
+                    <li><strong>Barre d’espace</strong> : tirer un laser</li>
+                    <li><strong>Touche "q"</strong> : quitter le jeu</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Idées d’améliorations</h2>
+                <ul>
+                    <li>Ajouter des niveaux de difficulté</li>
+                    <li>Intégrer des effets sonores</li>
+                    <li>Créer un menu de démarrage</li>
+                    <li>Ajouter différents types d’aliens</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="h4 text-secondary">Conclusion</h2>
+                <p>
+                    Ce projet est idéal pour s’initier à la programmation événementielle et graphique en Python. N’hésitez pas à le personnaliser, à proposer des améliorations ou à le partager avec d’autres passionnés de rétro-gaming et de code !
+                </p>
+                <p class="mt-4"><strong>Contributeur :</strong> Paul-Franck Dencausse</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+            <p class="mb-0">
+                <a href="../index.html#contact" class="text-warning">Me contacter</a> | 
+                <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+                <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS (optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
