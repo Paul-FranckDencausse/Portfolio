@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détecter les haïkus en Python : un projet poétique et algorithmique</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+        <a class="navbar-brand font-weight-bold text-dark" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#apropos">À Propos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <header class="mb-4 text-center">
+            <h1 class="display-4 text-warning">Détecter les haïkus en Python : un projet poétique et algorithmique</h1>
+            <p class="lead text-secondary">Quand la programmation rencontre la poésie japonaise</p>
+        </header>
+
+        <article>
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Introduction</h2>
+                <p>
+                    Le haïku, ce petit poème japonais en trois vers (5-7-5 syllabes), fascine par sa simplicité et sa profondeur. Mais comment détecter automatiquement un haïku dans un texte ? C’est le défi relevé par ce script Python, qui mêle analyse linguistique et créativité algorithmique.
+                </p>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Principe de l’algorithme</h2>
+                <ul>
+                    <li><strong>Comptage des syllabes</strong> : Pour chaque mot, on compte les groupes de voyelles (en français, chaque groupe correspond souvent à une syllabe). Le « e » final est ignoré dans la plupart des cas.</li>
+                    <li><strong>Analyse des lignes</strong> : Le texte est découpé en lignes. L’algorithme parcourt toutes les séquences de trois lignes consécutives.</li>
+                    <li><strong>Détection du schéma 5-7-5</strong> : Si la première ligne fait 5 syllabes, la deuxième 7, la troisième 5, alors c’est un haïku !</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Exemple de code</h2>
+                <pre class="bg-light border rounded p-2"><code>import re
+
+def compter_syllabes(mot):
+    mot = mot.lower()
+    syllabes = len(re.findall(r'[aeiouy]+', mot))
+    if mot.endswith('e'):
+        syllabes -= 1
+    return max(syllabes, 1)
+
+def compter_syllabes_phrase(phrase):
+    mots = phrase.split()
+    return sum(compter_syllabes(mot) for mot in mots)
+
+def detecter_haiku(texte):
+    phrases = texte.split('\n')
+    haikus_trouves = []
+    for i in range(len(phrases) - 2):
+        if (compter_syllabes_phrase(phrases[i]) == 5 and
+            compter_syllabes_phrase(phrases[i+1]) == 7 and
+            compter_syllabes_phrase(phrases[i+2]) == 5):
+            haikus_trouves.append((phrases[i], phrases[i+1], phrases[i+2]))
+    return haikus_trouves
+</code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h2 class="h4 text-secondary">Utilisation interactive</h2>
+                <ol>
+                    <li>L’utilisateur saisit plusieurs lignes de texte (une par ligne).</li>
+                    <li>Le script analyse le texte et affiche tous les haïkus détectés.</li>
+                </ol>
+                <pre class="bg-light border rounded p-2"><code>Entre ton texte ligne par ligne (laisse une ligne vide pour terminer) :
+...
+Aucun haïku détecté.
+</code></pre>
+            </section>
+
+            <section>
+                <h2 class="h4 text-secondary">Conclusion</h2>
+                <p>
+                    Ce projet montre qu’il est possible de mêler poésie et code, et d’automatiser la détection de structures littéraires. Les limites ? Le comptage des syllabes en français n’est pas parfait, mais l’approche est ludique et éducative. À vous d’essayer, d’améliorer, ou même de générer vos propres haïkus !
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Paul-Franck Dencausse | Développement Web</p>
+            <p class="mb-0">
+                <a href="../index.html#contact" class="text-warning">Me contacter</a> | 
+                <a href="https://www.linkedin.com/in/paul-franck-dencausse" class="text-warning">LinkedIn</a> | 
+                <a href="https://github.com/paul-franckdencausse" class="text-warning">GitHub</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS (optionnel) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
