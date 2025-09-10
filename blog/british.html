@@ -104,6 +104,34 @@ echo $tea;</code></pre>
                 </p>
             </section>
         </article>
+        <!-- Ajoute cette section à la suite de l'article existant dans british.html, par exemple juste avant la conclusion ou en bas de page. -->
+
+<section class="mb-5">
+    <h2 class="h4 text-secondary">Update: Now with British to American Spelling Conversion!</h2>
+    <p>
+        The <strong>£-PHP Preprocessor</strong> just got even more clever! In addition to converting your posh <code>£</code> variables into classic <code>$</code> for PHP, the preprocessor now automatically translates common British English words into their American English equivalents.
+    </p>
+    <p>
+        For example, <code>colour</code> becomes <code>color</code>, <code>favourite</code> becomes <code>favorite</code>, and <code>organise</code> becomes <code>organize</code>—all without you lifting a finger. This ensures your code is not only stylishly British in the writing phase, but also universally understood when executed or shared with your American colleagues.
+    </p>
+    <h5>How does it work?</h5>
+    <ol>
+        <li>Reads your <code>.phps</code> file with <code>£</code> variables and British spellings.</li>
+        <li>Replaces <code>£</code> with <code>$</code> for PHP compatibility.</li>
+        <li>Automatically swaps out British spellings for their American counterparts using a handy dictionary.</li>
+        <li>Saves and runs the translated PHP file as usual.</li>
+    </ol>
+    <h6>Example:</h6>
+    <pre class="bg-light border rounded p-2"><code>£favourite_colour = "blue";
+echo £favourite_colour;
+</code></pre>
+    <p>After preprocessing, your code becomes:</p>
+    <pre class="bg-light border rounded p-2"><code>$favorite_color = "blue";
+echo $favorite_color;
+</code></pre>
+    <p>
+        Whether you’re coding for Her Majesty or Uncle Sam, your PHP is now ready for both sides of the pond. Cheers to international code harmony!
+    </p>
     </main>
 
     <footer class="bg-dark text-light text-center py-3">
